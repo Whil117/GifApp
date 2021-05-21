@@ -1,32 +1,29 @@
 import React from 'react'
 import styled  from 'styled-components'
 
-
-
-
-const ContainerGif = styled.div`
+const GifStyled = styled.div`
         display:flex;
         flex-wraper:wrap;
-        width:250px;
-       box-shadow: 4px 4px  grey;
-       border:1px solid grey;
+        box-shadow: 8px 8px 15px #aaaaaa;
        border-radius:10px;
         flex-direction:column;
         align-items:center;
         justify-content:center;
         margin:10px;
 
-        .Gif{
+        img{
+                 border-radius:10px;
             width:200px;
              height:200px;
-
         }
 `
-export const GifGridItem = ({id,title,url}) => {
+
+    const GifGridItem = ({title,url}) => {
     return (
-        <ContainerGif key={id}>
-            <h4>{title}</h4>
-            <img className="Gif" src={url} alt={title}/>
-        </ContainerGif>
+        <GifStyled >
+            <img  src={url} alt={title}/>
+        </GifStyled>
     )
 }
+
+export default GifGridItem
